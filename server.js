@@ -12,7 +12,7 @@ app.listen(port, () => {
     console.log("Your server is listening on port " + port);
 })
 
-app.get('/', async (req, res) => {
+app.get('/restaurants', async (req, res) => {
     const getRestaurants = await Restaurant.findAll()
     res.json(getRestaurants)
 })
