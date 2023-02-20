@@ -14,5 +14,5 @@ app.listen(port, () => {
 
 app.get('/', async (req, res) => {
     const getRestaurants = await Restaurant.findAll()
-    res.send(getRestaurants)
+    res.json(getRestaurants)
 })
