@@ -7,8 +7,12 @@ const port = 3000;
 
 //TODO: Create your GET Request Route Below: 
 
-
 app.listen(port, () => {
     sequelize.sync();
     console.log("Your server is listening on port " + port);
+})
+
+app.get('/', async (req, res) => {
+    const getRestaurants = await Restaurant.findAll()
+    res.send(getRestaurants)
 })
