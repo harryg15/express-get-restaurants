@@ -14,11 +14,13 @@ app.listen(port, () => {
     console.log("Your server is listening on port " + port);
 })
 
+//get all
 app.get('/restaurants', async (req, res) => {
     const getRestaurants = await Restaurant.findAll()
     res.json(getRestaurants)
 })
 
+//get specific
 app.get('/restaurants/:id', async (req, res) => {
     const getSpecific = await Restaurant.findByPk(req.params.id)
     res.json(getSpecific)
