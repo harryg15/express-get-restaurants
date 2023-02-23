@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const {Restaurant} = require("../models/index")
-const {check, validationResult, isLength} = require('express-validator')
+const {check, validationResult} = require('express-validator')
 
 router.use(express.json())
 
